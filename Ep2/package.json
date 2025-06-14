@@ -1,0 +1,29 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "This package is created for study purpose.",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yug1020/NamasteNode.js.git"
+  },
+  "keywords": [
+    "Namaste_React",
+    "React_Study"
+  ],
+  "author": "Yug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yug1020/NamasteNode.js/issues"
+  },
+  "homepage": "https://github.com/Yug1020/NamasteNode.js#readme",
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
