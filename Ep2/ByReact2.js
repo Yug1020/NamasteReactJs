@@ -33,9 +33,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-
 const child1 = React.createElement("div", { id: "child1", key: "child1" }, [
   React.createElement("h1", { key: "h1-1" }, "I am h1 tag"),
   React.createElement("h2", { key: "h2-1" }, "I am h2 tag")
