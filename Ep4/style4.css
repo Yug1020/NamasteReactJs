@@ -1,0 +1,19 @@
+.Navbar{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.burger-logo{
+    margin: 0px 25px;
+    list-style: none;
+}
+.Navname{
+    display: flex;
+    flex-direction: row;
+}
+ul li{
+    margin: 5px 50px;
+    list-style: none;
+}
