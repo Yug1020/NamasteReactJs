@@ -38,3 +38,17 @@ ul li{
     width: 217px;
     height: 400px;
 }
+.cuisines{
+    display: block;
+    width: 222px;           
+    white-space: nowrap;    
+    text-overflow: ellipsis; 
+    overflow: hidden;   
+}
+.resName{
+    display: block;
+    width: 222px;           
+    white-space: nowrap;    
+    text-overflow: ellipsis; 
+    overflow: hidden;   
+}

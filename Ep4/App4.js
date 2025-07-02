@@ -969,20 +969,22 @@ const resObj = {
     ],
   }
 
-const Card = (resData) => {
+const Card = ({resData}) => {
    const { name, avgRating, slaString, cuisines, areaName, cloudinaryImageId } = resData;
     return(
         <div className="Card">
-                <img width="99%" height="50%" 
-                src={
-                    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/"
-                    +cloudinaryImageId
-                    }/>
-                <h2>{name}</h2>  
-                <h2>{avgRating} {slaString}</h2>
-                <p>{cuisines}</p> 
-                <p>{areaName}</p>
-            </div>
+            <img width="99%" height="50%" 
+            src={
+                "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/"
+                +cloudinaryImageId
+                }/>
+            <div>
+                <h2 className="Cardinfo resName">{name}</h2>  
+                <h2 className="Cardinfo">{avgRating} {slaString}</h2>
+                <p className="Cardinfo cuisines">{cuisines.join(", ")}</p> 
+                <p className="Cardinfo">{areaName}</p>
+                </div>  
+          </div>
     )
 }
 
