@@ -1,5 +1,4 @@
-const resObj = {
-    "array": [
+const resObj = [
       {
         "card": {
           "card": {
@@ -929,8 +928,7 @@ const resObj = {
           }
         }
       }
-    ],
-  }
+    ]
 
 
 export default resObj;

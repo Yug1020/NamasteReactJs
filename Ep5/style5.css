@@ -25,6 +25,9 @@ ul li{
 .Nameholder{
     margin: 0% 0.5%;
 }
+.filter-btn{
+    margin: 0.5% 0.5% 0% 0.5%;
+}
 .Cardcontainer{
     display: flex;
     flex-wrap: wrap;
