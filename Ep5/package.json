@@ -1,0 +1,28 @@
+{
+  "name": "ep5",
+  "version": "1.0.0",
+  "description": "This is Ep5 of react course",
+  "scripts": {
+    "start": "parcel index5.html",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yug1020/NamasteReactJs.git"
+  },
+  "keywords": [
+    "Ep5",
+    "NamasteReact"
+  ],
+  "author": "Yug (supreme leader)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yug1020/NamasteReactJs/issues"
+  },
+  "homepage": "https://github.com/Yug1020/NamasteReactJs#readme",
+  "dependencies": {
+    "parcel": "^2.15.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
