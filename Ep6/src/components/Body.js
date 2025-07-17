@@ -31,7 +31,7 @@ const Body = () => {
           const filter = allRes.filter(
             (res) => res.info.avgRating >= 4.5
           );
-          SetListofRes(filter);
+          setAllRes(filter);
         }}
       >
         Top Rated Restaurants
