@@ -1,46 +1,46 @@
 import { useEffect, useState } from "react";
-import resObj from "./utils/mock_data";
+// import resObj from "./utils/mock_data";
 import Card from "./Card";
 
 const Body = () => {
-  const [ListofRes, SetListofRes] = useState( resObj );
+  const [allRes, setAllRes] = useState([]);
 
-  useEffect(() =>{
-    fetchData()
-    console.log("Hail Supreme Leader")
-  }, [])
+  useEffect(() => {
+    fetchData();
+  }, [allRes]);
 
   const fetchData = async () => {
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9581934&lng=72.8320729&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
-    const json = await data.json()
-    
-    console.log(json)
-  }
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9581934&lng=72.8320729&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const json = await data.json();
 
-  console.log("Hello world")
+    // Adjust the path below if the structure is different
+    const restaurants = json?.data?.cards?.find(
+      (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+
+    // SetListofRes(restaurants);
+    setAllRes(restaurants);
+  };
+
   return (
     <div>
       <p className="Searchbar Nameholder">Search</p>
-
-      <button 
-      className="filter-btn"
-        onClick={()=>{
-            const filter = resObj.filter((res) => 
-            (
-            res.card.card.info.avgRating >= 4.5
-            ))
-            SetListofRes(filter)
-            console.log("done")
+      <button
+        className="filter-btn"
+        onClick={() => {
+          const filter = allRes.filter(
+            (res) => res.info.avgRating >= 4.5
+          );
+          SetListofRes(filter);
         }}
-        >
+      >
         Top Rated Restaurants
-        
       </button>
       <div className="Cardcontainer">
-            {ListofRes.map((res) => (
-                <Card key={res.card.card.info.id} resData={res.card.card.info} />
-            ))}
-        </div>
+        {allRes.map((res) => (
+          <Card key={res.info.id} resData={res.info} />
+        ))}
+      </div>
     </div>
   );
 };
