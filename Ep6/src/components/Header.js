@@ -1,6 +1,7 @@
 import { CND_LOGO } from "./utils/constants";
-
+import ShimmerUI from "./ShimmerUI";
 const Header = () =>{
+    
     return(
         <div className="Navbar">
             <div className="burger-logo">            

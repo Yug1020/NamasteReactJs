@@ -55,3 +55,37 @@ ul li{
     text-overflow: ellipsis; 
     overflow: hidden;   
 }
+.shimmer-card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.shimmer-header{
+    display: flex;
+    justify-content: space-between;
+    height: 63.6px;
+    width: 100%;
+    background-color:rgb(230, 230, 230);
+    border: none;
+}
+.shimmer-searchbar{
+    display: flex;
+    justify-content: space-between;
+    border:none;
+    background-color:rgb(230, 230, 230);
+    height: 21.6px;
+    width: 99%;
+    margin: 0% 0.5%;
+}
+.shimmer-btn{
+    border: none;
+    height: 21.3px;
+    width: 151.53px;
+    margin: 0.5% 0.5% 0% 0.5%;
+}
+.shimmercard{
+    background-color: rgb(230, 230, 230);
+    height: 400px;
+    width: 235px;
+    margin: 0.5%;
+}

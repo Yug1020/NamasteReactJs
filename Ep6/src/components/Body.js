@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react";
-// import resObj from "./utils/mock_data";
+import { useState, useEffect } from "react";
 import Card from "./Card";
+import ShimmerUI from "./ShimmerUI.js";
 
 const Body = () => {
-  const [allRes, setAllRes] = useState([]);
+    const [allRes, setAllRes] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+    useEffect(() => {
+      fetchData();
+    }, []);
 
-  const fetchData = async () => {
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9581934&lng=72.8320729&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-    const json = await data.json();
+    const fetchData = async () => {
+      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9581934&lng=72.8320729&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const json = await data.json();
 
-    // Adjust the path below if the structure is different
-    const restaurants = json?.data?.cards?.find(
-      (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+      // Adjust the path below if the structure is different
+      const restaurants = json?.data?.cards?.find(
+        (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
-    // SetListofRes(restaurants);
-    setAllRes(restaurants);
-  };
+      // SetListofRes(restaurants);
+      setAllRes(restaurants);
+    };
 
-  return (
+  return allRes.length === 0 ?<ShimmerUI></ShimmerUI> :(
     <div>
       <p className="Searchbar Nameholder">Search</p>
       <button
