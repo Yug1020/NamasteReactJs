@@ -4,12 +4,6 @@ import { CND_LOGO } from "./utils/constants";
 const Header = () =>{
     const [loginBtn, setloginBtn] = useState("Login")
 
-    const loginfunc = ()=>{
-        if (loginBtn === "Login")
-            return setloginBtn("Logout")
-        else return setloginBtn("Login")
-    }
-
     return(
         <div className="Navbar">
             <div className="burger-logo">            
@@ -21,7 +15,7 @@ const Header = () =>{
                     <li>Shopping</li>
                     <li>About us</li>
                     <li>Cart</li>
-                    <li><button onClick={loginfunc}>{loginBtn}</button></li>
+                    <li><button onClick={loginBtn === "Login" ? setloginBtn("Logout"): setloginBtn("Login")}>{loginBtn}</button></li>
                 </ul>
             </div>
         </div>
