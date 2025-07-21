@@ -7,13 +7,11 @@ const Body = () => {
     const [search, setSearch] = useState("");
 
     const searchfunc = ()=>{
-        const filterbyname = allRes.filter(
-            (res)=>{
-                res.info.name.toLowerCase().includes(search.toLowerCase())
-            }
-        )
-        setSearch(filterbyname)
-    }
+        const filterbyname = allRes.filter((res) =>
+            res.info.name.toLowerCase().includes(search.toLowerCase())
+        );
+        setAllRes(filterbyname);
+    };
     
     useEffect(() => {
       fetchData();
