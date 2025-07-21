@@ -4,7 +4,17 @@ import ShimmerUI from "./ShimmerUI.js";
 
 const Body = () => {
     const [allRes, setAllRes] = useState([]);
+    const [search, setSearch] = useState("");
 
+    const searchfunc = ()=>{
+        const filterbyname = allRes.filter(
+            (res)=>{
+                res.info.name.toLowerCase().includes(search.toLowerCase())
+            }
+        )
+        setSearch(filterbyname)
+    }
+    
     useEffect(() => {
       fetchData();
     }, []);
@@ -24,7 +34,18 @@ const Body = () => {
 
   return allRes.length === 0 ?<ShimmerUI></ShimmerUI> :(
     <div>
-      <p className="Searchbar Nameholder">Search</p>
+      <div className="Searchcontainer">
+            <input 
+            className="Searchbar" 
+            type="text" 
+            placeholder="Search for restaurant, item or more" 
+            value={search} 
+            onChange={(e)=>{setSearch(e.target.value)}}
+            >
+            </input>
+            <button className="Search-btn" onClick={searchfunc}>Search</button>
+        </div>
+
       <button
         className="filter-btn"
         onClick={() => {

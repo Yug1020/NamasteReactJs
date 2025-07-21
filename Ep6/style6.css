@@ -19,11 +19,12 @@ ul li{
     list-style: none;
 }
 .Searchbar{
-    margin: 0.5% 0%;
-    border: 2px solid black;
-}
-.Nameholder{
     margin: 0% 0.5%;
+    border: 1px solid black;
+    width: 94.5%;
+}
+.Search-btn{
+    margin: 0px 0px 0px -6px;
 }
 .filter-btn{
     margin: 0.5% 0.5% 0% 0.5%;
