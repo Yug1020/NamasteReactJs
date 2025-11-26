@@ -5,9 +5,10 @@ import ShimmerUI from "./ShimmerUI.js";
 const Body = () => {
     const [allRes, setAllRes] = useState([]);
     const [search, setSearch] = useState("");
+    const [copyofall, setCopyofall] = useState([]);
 
     const searchfunc = ()=>{
-        const filterbyname = allRes.filter((res) =>
+        const filterbyname = copyofall.filter((res) =>
             res.info.name.toLowerCase().includes(search.toLowerCase())
         );
         setAllRes(filterbyname);
@@ -28,6 +29,7 @@ const Body = () => {
 
       // SetListofRes(restaurants);
       setAllRes(restaurants);
+      setCopyofall(restaurants);
     };
 
   return allRes.length === 0 ?<ShimmerUI></ShimmerUI> :(
@@ -39,15 +41,21 @@ const Body = () => {
             placeholder="Search for restaurant, item or more" 
             value={search} 
             onChange={(e)=>{setSearch(e.target.value)}}
+            onKeyDown={(e) => {
+              if(e.key == "Enter"){
+                searchfunc()
+              }
+            }}
             >
             </input>
-            <button className="Search-btn" onClick={searchfunc}>Search</button>
-        </div>
+            
+            <button className="Search-btn"  onClick={searchfunc}>Search</button>
+      </div>
 
       <button
         className="filter-btn"
         onClick={() => {
-          const filter = allRes.filter(
+          const filter = copyofall.filter(
             (res) => res.info.avgRating >= 4.5
           );
           setAllRes(filter);
@@ -59,6 +67,11 @@ const Body = () => {
         {allRes.map((res) => (
           <Card key={res.info.id} resData={res.info} />
         ))}
+
+        {/* {copyofall.map((res) => (
+          <Card key={res.info.id} resData={res.info} />
+        ))} */}
+
       </div>
     </div>
   );
