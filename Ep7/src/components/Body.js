@@ -9,9 +9,14 @@ const Body = () => {
 
     const searchfunc = ()=>{
         const filterbyname = copyofall.filter((res) =>
-            res.info.name.toLowerCase().includes(search.toLowerCase())
+          res.info.name.toLowerCase().includes(search.toLowerCase())
         );
-        setAllRes(filterbyname);
+        if(filterbyname.length > 0){
+          setAllRes(filterbyname);
+        }
+        else{
+          alert("Result not found")
+        }
     };
     
     useEffect(() => {
@@ -48,7 +53,6 @@ const Body = () => {
             }}
             >
             </input>
-            
             <button className="Search-btn"  onClick={searchfunc}>Search</button>
       </div>
 

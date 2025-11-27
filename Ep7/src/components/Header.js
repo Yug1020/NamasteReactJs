@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CND_LOGO } from "./utils/constants";
 
 const Header = () =>{
     const [loginBtn, setloginBtn] = useState("Login")
 
+    useEffect(() => {
+        console.log("useEffect called")
+    },[loginBtn])
+
+    console.log("Header called")
     return(
         <div className="Navbar">
             <div className="burger-logo">            
@@ -19,7 +24,6 @@ const Header = () =>{
                 </ul>
             </div>
         </div>
-
     )
 }
 
