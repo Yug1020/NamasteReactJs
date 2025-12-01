@@ -21,10 +21,10 @@ const Body = () => {
     
     useEffect(() => {
       fetchData();
-    }, []);
+    },[]);
 
     const fetchData = async () => {
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.24630&lng=73.13150&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       const json = await data.json();
       console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       // json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants

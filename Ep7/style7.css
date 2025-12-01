@@ -1,3 +1,7 @@
+*{
+    overflow-x: hidden;
+    overflow-y:auto;
+}
 .Navbar{
     margin: 0.5% 0%;
     border: 2px solid black;
@@ -89,4 +93,20 @@ ul li{
     height: 400px;
     width: 235px;
     margin: 0.5%;
+}
+.menupage_parent_div{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.menupage_child_div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: left;
+}
+.menupage_foodinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
