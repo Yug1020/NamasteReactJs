@@ -12,9 +12,12 @@ const Header = () =>{
     console.log("Header called")
     return(
         <div className="Navbar">
-            <div className="burger-logo">            
-                <li><img alt="burger-logo" width="50px" src={CND_LOGO} /></li>
-            </div>
+            <Link to="/">
+                <div className="burger-logo">            
+                    <li><img alt="burger-logo" width="50px" src={CND_LOGO} /></li>
+                </div>            
+            </Link>
+
             <div>
                 <ul className="Navname">
                     <li>

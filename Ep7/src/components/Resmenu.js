@@ -1,31 +1,57 @@
-import { CND_LOGO } from "./utils/constants";
-import { useEffect, useState } from "react";
+import { res_menu } from "./utils/mock_data_res_menu";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+
 
 const Resmenu = () => {
+    // simple way to directly call local data file
+    const { res_id } = useParams();
+    const resInfo = res_menu[ res_id ];
+
     useEffect(()=>{
-        fetchMenu();
-    },[]);
+        console.log(resInfo)
+    },[])
+    
+    const { name, rating, location, menuItems } = resInfo
 
-    const fetchMenu = async() => {
-        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.99740&lng=79.00110&restaurantId=830418&catalog_qa=undefined&submitAction=ENTER");
-        const json = await data.json()
-        console.log(json);
-        // console.log(data.status)
-        // console.log(json)
+    // const [ resInfo, setResInfo ] = useState(null)
 
+    // useEffect( ()=> {
+    //     fetchdata();
+    //     console.log(reslist)
+    // },[])
 
-    }
-    return (
+    // const fetchdata = async() => {
+    //     reslist = res_menu
+    //     setResInfo(reslist);
+    // }
+
+    return(
         <div className="menupage_parent_div">
             <div className="menupage_child_div">
-                <h1>Restaurant Name</h1>
-                <div className="menupage_foodinfo" >
-                    <h2>Your Choice</h2>
-                    <img width="50px" src={CND_LOGO}/>
-                </div>
-                <h3>Menu</h3>
+                <h1>{name}</h1>
+                <h2>{rating}</h2>
+                <h2>{location.locality},</h2>
+                {location.locality !== location.areaName && <h3>{location.areaName}</h3>}
+                <h2>Menu</h2>
+                
+                {
+                    menuItems.map((item) =>
+                        (   <ul className="menupage_foodinfo">
+                                <li key={item.id} >{item.name}</li>
+                                <li key={item.id} >{item.price}</li>
+                            </ul>
+                            
+                        )
+
+                    )
+                }
+                
+
+                    
             </div>
         </div>
+        
     )
 }
 

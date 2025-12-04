@@ -98,12 +98,12 @@ ul li{
     display: flex;
     flex-direction:column;
     align-items: center;
+    width: 100%;
 }
 .menupage_child_div{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    align-items: left;
+    width: 30%;
 }
 .menupage_foodinfo{
     display: flex;

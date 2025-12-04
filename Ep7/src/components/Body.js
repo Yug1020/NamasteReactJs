@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
 import ShimmerUI from "./ShimmerUI.js";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     const [allRes, setAllRes] = useState([]);
     const [search, setSearch] = useState("");
     const [copyofall, setCopyofall] = useState([]);
+
 
     const searchfunc = ()=>{
         const filterbyname = copyofall.filter((res) =>
@@ -24,17 +26,15 @@ const Body = () => {
     },[]);
 
     const fetchData = async () => {
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9581934&lng=72.8320729&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       const json = await data.json();
-      console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-      // json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      console.log(json)
 
       // Adjust the path below if the structure is different
       const restaurants = json?.data?.cards?.find(
         (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
       )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
-      // SetListofRes(restaurants);
       setAllRes(restaurants);
       setCopyofall(restaurants);
     };
@@ -71,12 +71,15 @@ const Body = () => {
       </button>
       <div className="Cardcontainer">
         {allRes.map((res) => (
-          <Card key={res.info.id} resData={res.info} />
+          <Link  
+            key={res.info.id} to={"/restaurant_menu/" + res.info.id}>
+          <Card resData={res.info} /> 
+          </Link>
+
+          // <Card key={res.info.id} resData={res.info} ></Card>
+          
         ))}
 
-        {/* {copyofall.map((res) => (
-          <Card key={res.info.id} resData={res.info} />
-        ))} */}
 
       </div>
     </div>
