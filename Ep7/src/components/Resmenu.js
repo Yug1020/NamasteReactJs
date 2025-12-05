@@ -1,6 +1,6 @@
 import { res_menu } from "./utils/mock_data_res_menu";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router-dom";
 
 
 const Resmenu = () => {
@@ -13,6 +13,16 @@ const Resmenu = () => {
     },[])
     
     const { name, rating, location, menuItems } = resInfo
+
+    if(!resInfo){
+            return(
+            <div className="menupage_parent_div">
+                <div className="menupage_child_div">
+                    <h1>restaurant is offline</h1>
+                </div>
+            </div>
+            )
+        }
 
     // const [ resInfo, setResInfo ] = useState(null)
 
@@ -34,21 +44,16 @@ const Resmenu = () => {
                 <h2>{location.locality},</h2>
                 {location.locality !== location.areaName && <h3>{location.areaName}</h3>}
                 <h2>Menu</h2>
-                
                 {
                     menuItems.map((item) =>
-                        (   <ul className="menupage_foodinfo">
-                                <li key={item.id} >{item.name}</li>
-                                <li key={item.id} >{item.price}</li>
+                        (   <ul key={item.id} className="menupage_foodinfo">
+                                <li >{item.name}</li>
+                                <li >{item.price}</li>
                             </ul>
-                            
                         )
-
                     )
                 }
-                
-
-                    
+                <Link to="/"> <h3> ⬅  back to the home page </h3> </Link>    
             </div>
         </div>
         
