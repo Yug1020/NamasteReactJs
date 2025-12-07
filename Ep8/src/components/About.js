@@ -1,14 +1,23 @@
-import Header from "./Header";
+import {Component} from 'react'
 import User from "./UserClass.js"
 
-const About = () => {
-    return(
+class About extends Component{
+    constructor(props){
+        super(props)
+        console.log("constructor parent class")
+    }
+    componentDidMount(){
+        console.log("parent did mount")
+    }
+    render(){
+        return(
         <div>
             <h1>About Us Page</h1>
             <User name={"The King In North"}></User>
-
+            {console.log("render parent class")}
         </div>
     )
+    }
 }
 
 export default About;

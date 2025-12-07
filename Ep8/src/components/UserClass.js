@@ -8,9 +8,13 @@ class User extends React.Component{
             count:0,
             count2: 1
         }
-        console.log("Constructor")
+        console.log("Constructor child class")
+    }
+    componentDidMount(){
+        console.log("child did mount")
     }
     render(){
+        console.log("Render child class")
         return(
             <div>
                 <h1>Name: {this.props.name}</h1>
@@ -24,7 +28,6 @@ class User extends React.Component{
                 <p>count2: {this.state.count2}</p>
                 <h2>Location: North</h2>
                 <h2>insta: @i_a_m_yug</h2>
-                {console.log("render")}
             </div>
         );
     };
