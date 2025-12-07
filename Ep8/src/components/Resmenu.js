@@ -11,8 +11,6 @@ const Resmenu = () => {
     useEffect(()=>{
         console.log(resInfo)
     },[])
-    
-    const { name, rating, location, menuItems } = resInfo
 
     if(!resInfo){
             return(
@@ -23,6 +21,8 @@ const Resmenu = () => {
             </div>
             )
         }
+
+    const { name, rating, location, menuItems } = resInfo
 
     // const [ resInfo, setResInfo ] = useState(null)
 
