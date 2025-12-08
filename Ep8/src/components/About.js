@@ -4,17 +4,17 @@ import User from "./UserClass.js"
 class About extends Component{
     constructor(props){
         super(props)
-        console.log("constructor parent class")
+        // console.log("constructor parent class")
     }
     componentDidMount(){
-        console.log("parent did mount")
+        // console.log("parent did mount")
     }
     render(){
         return(
         <div>
-            <h1>About Us Page</h1>
+            <h1>About a hagesh developer</h1>
             <User name={"The King In North"}></User>
-            {console.log("render parent class")}
+            {/* {console.log("render parent class")} */}
         </div>
     )
     }

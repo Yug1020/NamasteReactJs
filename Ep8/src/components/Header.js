@@ -6,10 +6,10 @@ const Header = () =>{
     const [loginBtn, setloginBtn] = useState("Login")
 
     useEffect(() => {
-        console.log("useEffect called")
+        // console.log("useEffect called")
     },[loginBtn])
 
-    console.log("Header called")
+    // console.log("Header called")
     return(
         <div className="Navbar">
             <Link to="/">
