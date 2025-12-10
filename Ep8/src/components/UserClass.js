@@ -39,10 +39,7 @@ class User extends React.Component{
                 {/* <button onClick={() => {
                     this.setState({
                         count: this.state.count + 1,
-                        count2: this.state.count + 2
-
-                        1:55 done
-
+                        count2: this.state.count + 2 
                     })
                 }}></button> */}
                 {/* <p>count: {this.state.count}</p>
