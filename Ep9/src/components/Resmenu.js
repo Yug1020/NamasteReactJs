@@ -1,16 +1,15 @@
-import { res_menu } from "./utils/mock_data_res_menu";
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import useResMenu from "./utils/useResMenu";
 
 const Resmenu = () => {
-    // simple way to directly call local data file
-    const { res_id } = useParams();
-    const resInfo = res_menu[ res_id ];
+// simple way to directly call local data file
+    // const { res_id } = useParams();
+    // const resInfo = res_menu[ res_id ];
 
-    useEffect(()=>{
-        console.log(resInfo)
-    },[])
+    // useEffect(()=>{
+    //     console.log(resInfo)
+    // },[])
+    const resInfo = useResMenu()
 
     if(!resInfo){
             return(
@@ -21,8 +20,10 @@ const Resmenu = () => {
             </div>
             )
         }
-
+        
     const { name, rating, location, menuItems } = resInfo
+
+    // try to call data file by useState and useEffect
 
     // const [ resInfo, setResInfo ] = useState(null)
 
