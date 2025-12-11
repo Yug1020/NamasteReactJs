@@ -10,8 +10,8 @@ const Body = () => {
 
 
     const searchfunc = ()=>{
-        const filterbyname = copyofall.filter((res) =>
-          res.info.name.toLowerCase().includes(search.toLowerCase())
+        const filterbyname = copyofall.filter((individul_res) =>
+          individul_res.info.name.toLowerCase().includes(search.toLowerCase())
         );
         if(filterbyname.length > 0){
           setAllRes(filterbyname);
@@ -60,7 +60,7 @@ const Body = () => {
         className="filter-btn"
         onClick={() => {
           const filter = copyofall.filter(
-            (res) => res.info.avgRating >= 4.5
+            (individul_res) => individul_res.info.avgRating >= 4.5
           );
           setAllRes(filter);
         }}
@@ -68,17 +68,13 @@ const Body = () => {
         Top Rated Restaurants
       </button>
       <div className="Cardcontainer">
-        {allRes.map((res) => (
+        {allRes.map((individul_res) => (
           <Link  
-            key={res.info.id} to={"/restaurant_menu/" + res.info.id}>
-          <Card resData={res.info} /> 
+            key={individul_res.info.id} to={"/restaurant_menu/" + individul_res.info.id}>
+          <Card resData={individul_res.info} /> 
           </Link>
-
-          // <Card key={res.info.id} resData={res.info} ></Card>
-          
         ))}
-
-
+        
       </div>
     </div>
   );
