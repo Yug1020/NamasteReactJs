@@ -2,7 +2,7 @@ import { res_menu } from "./mock_data_res_menu";
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router";
 
-const useResMenu = () => {
+export const useResMenu = () => {
     
     const [ resInfo, setResInfo ] = useState(null)
     const { res_id } = useParams()
@@ -21,4 +21,3 @@ const useResMenu = () => {
     return resInfo;
 }
 
-export default useResMenu

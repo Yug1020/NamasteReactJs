@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import { CND_LOGO } from "./utils/constants";
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
+import useNetStatus from "./utils/useNetStatus";
 const Header = () =>{
     const [loginBtn, setloginBtn] = useState("Login")
 
@@ -10,6 +10,10 @@ const Header = () =>{
     },[loginBtn])
 
     // console.log("Header called")
+    // (online_status === true) ? "Online" : (online_status === false) ? "offline"
+
+    const online_status = useNetStatus()
+
     return(
         <div className="Navbar">
             <Link to="/">
@@ -21,6 +25,9 @@ const Header = () =>{
             <div>
                 <ul className="Navname">
                     <li>
+                        Online Status = {(online_status === true) ? "Online ✅" : "Offline ❌"}
+                    </li>
+                    <li>
                         <Link to="/">Home</Link> 
                     </li>
                     <li>Cart</li>
@@ -29,6 +36,9 @@ const Header = () =>{
                     </li>
                     <li>
                         <Link to="/contact">Contact us</Link>
+                    </li>
+                    <li>
+                        <Link to="/grocery">Grocery</Link>
                     </li>
                     <li><button onClick={()=>{loginBtn === "Login" ? setloginBtn("Logout"): setloginBtn("Login")}}>{loginBtn}</button></li>
                 </ul>

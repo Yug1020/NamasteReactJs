@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import useResMenu from "./utils/useResMenu";
+import { useResMenu } from "./utils/useResMenu";
 
 const Resmenu = () => {
 // simple way to directly call local data file
@@ -9,6 +9,8 @@ const Resmenu = () => {
     // useEffect(()=>{
     //     console.log(resInfo)
     // },[])
+
+    //In next line i use custome hook to fetch the data from from "res_menu"
     const resInfo = useResMenu()
 
     if(!resInfo){
@@ -23,7 +25,7 @@ const Resmenu = () => {
         
     const { name, rating, location, menuItems } = resInfo
 
-    // try to call data file by useState and useEffect
+// try to call data file by useState and useEffect
 
     // const [ resInfo, setResInfo ] = useState(null)
 
