@@ -1,4 +1,11 @@
 @import "tailwindcss";
+/* Optional: global styles */
+@layer base {
+  body {
+    margin: 0px 8px;
+  }
+}
+
 
 /* *{
     overflow-x: hidden;
