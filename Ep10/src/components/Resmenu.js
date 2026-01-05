@@ -15,10 +15,10 @@ const Resmenu = () => {
 
     if(!resInfo){
             return(
-            <div className="menupage_parent_div">
-                <div className="menupage_child_div">
+            <div className="text-2xl">
+                {/* <div className="menupage_child_div"> */}
                     <h1>restaurant is offline</h1>
-                </div>
+                {/* </div> */}
             </div>
             )
         }
@@ -40,23 +40,23 @@ const Resmenu = () => {
     // }
 
     return(
-        <div className="menupage_parent_div">
-            <div className="menupage_child_div">
-                <h1>{name}</h1>
-                <h2>{rating}</h2>
-                <h2>{location.locality},</h2>
+        <div className="flex flex-col items-center w-full">
+            <div className="flex flex-col w-[30%]">
+                <h1 className="text-3xl font-semibold my-5">{name}</h1>
+                <h2 className="text-3xl font-semibold my-5">{rating}</h2>
+                <h2 className="text-3xl font-semibold my-5">{location.locality},</h2>
                 {location.locality !== location.areaName && <h3>{location.areaName}</h3>}
-                <h2>Menu</h2>
+                <h2 className="text-3xl font-semibold">Menu</h2>
                 {
                     menuItems.map((item) =>
-                        (   <ul key={item.id} className="menupage_foodinfo">
-                                <li >{item.name}</li>
-                                <li >{item.price}</li>
+                        (   <ul key={item.id} className="flex flex-row justify-between ml-10">
+                                <li className="my-5">{item.name}</li>
+                                <li className="my-5">{item.price}</li>
                             </ul>
                         )
                     )
                 }
-                <Link to="/"> <h3> ⬅  back to the home page </h3> </Link>    
+                <Link to="/" className="my-5"> <h3> ⬅  back to the home page </h3> </Link>    
             </div>
         </div>
         

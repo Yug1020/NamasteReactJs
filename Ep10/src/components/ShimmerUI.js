@@ -3,19 +3,22 @@ const ShimmerUI = ()=>{
     const Shimmecard = []
     
     for ( let i=0; i<12; i++){
-        Shimmecard.push(<div key={i} className="bg-gray-200 h-100 w-59 m-0.12"></div>)
+        Shimmecard.push(<div key={i} className="bg-gray-200 h-87 w-61"></div>)
     }
     debugger;
     return (
         <div> 
-            <button className="flex justify-between h-1 w-100% bg-gray-200"></button> 
-            <button className="border-none h-5 w-38"></button> 
-            <div className="flex row wrap-normal">
+            <div className="flex flex-row">
+                <button className="mr-0.5 my-0.5 h-7 px-1 rounded-md w-[94.5%]  bg-gray-200"></button>
+                <button className="bg-gray-200 rounded-2xl px-1.5 text-gray-200">Search </button>
+            </div>
+            <button className="my-2  h-7 bg-gray-200 text-gray-200 rounded-md px-1">Top Rated Restaurants</button>
+            <div className="grid grid-row-2 grid-cols-6 gap-2">
                 {Shimmecard}
             </div>
-        </div>
+        </div>           
     )
-    
+
 }
 
 export default ShimmerUI;

@@ -4,7 +4,7 @@ import { CLOUD_LINK } from "./utils/constants";
 const Card = ({resData}) => {
    const { name, avgRating, slaString, cuisines, areaName, cloudinaryImageId } = resData;
     return(
-        <div className="border bg-gray-300 ">
+        <div className="border bg-gray-300 m-px p-1">
             <img width="100%" height="50%" 
             src={
                 CLOUD_LINK

@@ -19,7 +19,7 @@ class User extends React.Component{
     }
     async componentDidMount(){
 
-        const data = await fetch("https://api.github.com/users/abhay333d")
+        const data = await fetch("https://api.github.com/users/Yug1020")
         const json = await data.json();
         console.log(json)
         
@@ -30,11 +30,12 @@ class User extends React.Component{
     
     render(){         
         // console.log("Render child class")
-        const { name, location, avatar_url} =  this.state.userInfo
+        const { name, location, avatar_url, bio} =  this.state.userInfo
         return(
             <div>
-                <img width="155vw" src={avatar_url}></img>
-                <h1>Name: {name}</h1>
+                <img className='w-35' src={avatar_url}></img>
+                <h1 className=' text-2xl'>Name: {name}</h1>
+                <p className='text-base'>Bio: {bio}</p>
                 {/* <button onClick={() => {
                     this.setState({
                         count: this.state.count + 1,
@@ -44,7 +45,7 @@ class User extends React.Component{
                 {/* <p>count: {this.state.count}</p>
                 <p>count2: {this.state.count2}</p> */}
                 <h2>Location: {location}</h2>
-                <h2>insta: @abhay333d</h2>
+                <h2>insta: @i_a_m_yug</h2>
             </div>
         );
     };

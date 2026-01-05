@@ -41,7 +41,7 @@ const Body = () => {
     <div>
       <div className="Searchcontainer">
             <input 
-            className="mr-0.5 my-0.5 border rounded-md w-[94.5%]" 
+            className="mr-0.5 my-0.5 px-1 border bg-gray-300 rounded-md w-[94.5%]" 
             type="text" 
             placeholder="Search for restaurant, item or more" 
             value={search} 
@@ -53,11 +53,11 @@ const Body = () => {
             }}
             >
             </input>
-            <button className="ml-1.5 border border-black bg-gray-300 rounded-xl px-1.5"  onClick={searchfunc}>Search</button>
+            <button className="border border-black bg-gray-300 rounded-xl px-1.5"  onClick={searchfunc}>Search</button>
       </div>
 
       <button
-        className="my-0.5 mx-0.12 border border-black  bg-gray-300 rounded-md px-1"
+        className="my-2 border border-black  bg-gray-300 rounded-md px-1"
         onClick={() => {
           const filter = copyofall.filter(
             (res) => res.info.avgRating >= 4.5
@@ -67,7 +67,7 @@ const Body = () => {
       >
         Top Rated Restaurants
       </button>
-      <div className="grid my-0.12 mx-0.12 grid-row-4 grid-cols-6 gap-4">
+      <div className="grid grid-row-4 grid-cols-6 gap-2">
         {allRes.map((res) => (
           <Link  
             key={res.info.id} to={"/restaurant_menu/" + res.info.id}>
