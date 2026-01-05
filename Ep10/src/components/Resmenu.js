@@ -15,9 +15,9 @@ const Resmenu = () => {
 
     if(!resInfo){
             return(
-            <div className="text-2xl">
+            <div className="flex font-semibold text-3xl justify-center">
                 {/* <div className="menupage_child_div"> */}
-                    <h1>restaurant is offline</h1>
+                    <h1 >restaurant is offline</h1>
                 {/* </div> */}
             </div>
             )
