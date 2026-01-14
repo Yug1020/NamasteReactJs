@@ -1,4 +1,4 @@
-import { res_menu } from "./mock_data_res_menu";
+import { res_menu } from "../utils/mock_data_res_menu";
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router";
 

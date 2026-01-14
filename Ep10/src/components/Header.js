@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CND_LOGO } from "./utils/constants";
 import { Link } from "react-router-dom";
-import useNetStatus from "./utils/useNetStatus";
+import useNetStatus from "./hooks/useNetStatus.js";
 const Header = () =>{
     const [loginBtn, setloginBtn] = useState("Login")
 

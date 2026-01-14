@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useResMenu } from "./utils/useResMenu";
+import { useResMenu } from "./hooks/useResMenu";
 
 const Resmenu = () => {
 // simple way to directly call local data file
