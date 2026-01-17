@@ -15,7 +15,7 @@ const Header = () =>{
     const online_status = useNetStatus()
 
     return(
-        <div className="flex flex-row justify-between items-center my-2 border border-black rounded-xl">
+        <div className="sticky top-0 flex flex-row justify-between items-center my-2 bg-white border border-black rounded-xl z-50">
             <Link to="/">
                 <div className="mx-6.25 list-none">            
                     <li><img alt="burger-logo" width="50px" src={CND_LOGO} /></li>
