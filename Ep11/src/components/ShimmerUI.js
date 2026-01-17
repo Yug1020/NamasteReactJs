@@ -5,7 +5,6 @@ const ShimmerUI = ()=>{
     for ( let i=0; i<12; i++){
         Shimmecard.push(<div key={i} className="bg-gray-200 h-87 w-61"></div>)
     }
-    debugger;
     return (
         <div> 
             <div className="flex flex-row">
