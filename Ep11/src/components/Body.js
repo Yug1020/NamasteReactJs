@@ -67,7 +67,7 @@ const Body = () => {
       <div className="grid grid-row-4 grid-cols-6 gap-2">
         {allRes.map((res) => (
           <Link  
-            key={res.info.id} to={"/restaurant_menu/" + res.info.id}>
+            key={res.info.id} to={"/restaurant_menu/" + res.info.id} resdata={res.info}>
             {/* {res.info.avgRating >= 4.5 ? <CardWrapped resData={res.info}></CardWrapped> : <Card resData={res.info} /> } */}
             {res.info.avgRating >= 4.5 ? <RecoCard resData={res.info}/> : <Card resData={res.info} /> }
           </Link>

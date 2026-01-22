@@ -7,7 +7,7 @@ const Card = ({resData}) => {
             <img className="w-100% h-50% rounded-t-2xl"
             src={
                 CLOUD_LINK
-                + cloudinaryImageId
+                + resData.cloudinaryImageId
                 }/>
             <div>
                 <h2 className="  block w-56 whitespace-nowrap overflow-hidden text-ellipsis">{name}</h2>  
@@ -29,28 +29,5 @@ export const CardWrapped = (Card) => {
         )
     }
 }
-
-// chatGPT
-// export const WithRecommendedLabel = (WrappedComponent) => {
-//   return function EnhancedComponent(props) {
-//     return (
-//       <div className="relative">
-//         <span className="absolute flex flex-row bg-black text-white p-1 rounded-2xl">
-//           Recommended
-//         </span>
-//         <WrappedComponent {...props} />
-//       </div>
-//     );
-//   };
-// };
-
-// export const CardWrapped = ({resData}) => {
-//     return(
-//         <div>
-//             <label className="absolute flex flex-row bg-black text-white p-1 rounded-2xl">Recommended</label>
-//             <Card resData={resData}></Card>
-//         </div>
-//     )
-// }
 
 export default Card;
