@@ -1,6 +1,6 @@
 export const res_menu = {
-  "9869": {
-    id: "9869",
+  "602333": {
+    id: "602333",
     name: "Pizza Hut",
     imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/1/fe3a5f94-e46b-401f-bf9d-7e6a9d16d8cb_9869.JPG",
     location: { locality: "Fort", areaName: "Fort" },

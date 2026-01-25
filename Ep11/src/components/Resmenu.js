@@ -2,11 +2,21 @@ import { Link } from "react-router-dom";
 import { useResMenu } from "./hooks/useResMenu";
 import { RestaurantMenu } from "./RestaurantMenu";
 import { CLOUD_LINK } from "./utils/constants";
-import  useSwiggyApi from "./hooks/useSwiggyApi";
+// import  useSwiggyApi from "./hooks/useSwiggApi";
+import { useState, useEffect } from "react";
 
 const Resmenu = (props) => {
+    const [showMenu, setShowMenu] = useState(false)
     const resInfo = useResMenu()
     const { resdata } = props;
+
+    const handleMenu = () => {
+        showMenu ? setShowMenu(false) : setShowMenu(true)
+    }
+
+    useEffect(() => {
+        console.log(showMenu)
+    },[setShowMenu])
 
     if(!resInfo){
             return(
@@ -34,17 +44,22 @@ const Resmenu = (props) => {
                     <h3 className="text-lg">{deliveryTime}</h3>
                 </div>
                 
-                
-                <h2 className="text-3xl font-semibold">Menu</h2>
-                {
-                    menuItems.map((item) =>
-                        (   <ul key={item.id} className="flex flex-row justify-between ml-10">
-                                <li className="my-5">{item.name}</li>
-                                <li className="my-5">{item.price}</li>
-                            </ul>
+                <div onClick={handleMenu} className="flex flex-row justify-between mt-2 border-b-5 border-gray-300 cursor-pointer">
+                    <h2 className="text-2xl font-semibold">Menu</h2>
+                    <p className="flex items-center">⏬</p>
+                </div>
+
+                { showMenu ?
+                        menuItems.map((item) =>
+                            (   <ul key={item.id} className="flex flex-row justify-between border rounded-b-2xl border-gray-300 p-1 ">
+                                    <li className="my-1">{item.name}</li>
+                                    <li className="my-1">{item.price}</li>
+                                </ul>
+                            )
                         )
-                    )
+                        :""
                 }
+                
                 {/* <RestaurantMenu></RestaurantMenu> */}
                 <Link to="/" className="my-5"> <h3> ⬅  back to the home page </h3> </Link>    
             </div>
