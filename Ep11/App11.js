@@ -1,4 +1,4 @@
-import { React, lazy, Suspense } from "react";
+import { React, lazy, Suspense, useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
@@ -7,17 +7,25 @@ import Error from "./src/components/Error";
 import Contact from "./src/components/contact";
 import Resmenu from "./src/components/Resmenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
-import { lazy } from "react";
 import ShimmerUI from "./src/components/ShimmerUI";
+import UserContext from "./src/components/utils/UserContext";
 
 const Grocery = lazy(() => import("./src/components/Grocery"))
 
 
 const App = () => {
+    const [ liveLocation, setLiveLocation ] = useState(""); 
+    
+    useEffect(()=>{
+        console.log(liveLocation)
+    },[])
+
     return(
         <div>
-            <Header></Header>
-            <Outlet></Outlet>
+            <UserContext.Provider value={{currentLocation:liveLocation, setLiveLocation, ownerName:"Yugandhar Dhore"}}>
+                <Header></Header>
+                <Outlet></Outlet>
+            </UserContext.Provider>
         </div>
     )
 }

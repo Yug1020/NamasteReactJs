@@ -1,18 +1,31 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { CND_LOGO } from "./utils/constants";
 import { Link } from "react-router-dom";
 import useNetStatus from "./hooks/useNetStatus.js";
+import UserContext from "./utils/UserContext.js";
+
 const Header = () =>{
+
     const [loginBtn, setloginBtn] = useState("Login")
 
     useEffect(() => {
         // console.log("useEffect called")
     },[loginBtn])
 
-    // console.log("Header called")
-    // (online_status === true) ? "Online" : (online_status === false) ? "offline"
+    const { userName, ownerName } = useContext(UserContext)
 
     const online_status = useNetStatus()
+
+    const initials = (name = "") => {
+        // if (!name) return "df";
+        const parts = name.trim().split(" ")
+
+        const FirstName = parts[0]?.[0]
+        const SecondName = parts[1]?.[0]
+        const result = (FirstName + SecondName)
+
+        return (result.toUpperCase())
+    }
 
     return(
         <div className="sticky top-0 flex flex-row justify-between items-center my-2 bg-white border border-black rounded-xl z-50">
@@ -23,7 +36,7 @@ const Header = () =>{
             </Link>
 
             <div>
-                <ul className="flex flex-row justify-between w-200 mx-5">
+                <ul className="flex flex-row justify-between w-200 mx-5 items-center">
                     <li>
                         Online Status = {online_status ? "Online ✅" : "Offline ❌"}
                     </li>
@@ -40,7 +53,10 @@ const Header = () =>{
                     <li>
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="border border-black bg-gray-300 rounded-xl px-1.5"><button onClick={()=>{loginBtn === "Login" ? setloginBtn("Logout"): setloginBtn("Login")}}>{loginBtn}</button></li>
+                    <button className="border border-black bg-gray-300 rounded-xl px-1 items-center" onClick={()=>{loginBtn === "Login" ? setloginBtn("Logout"): setloginBtn("Login")}}>{loginBtn}</button>
+                    
+                    <li className="border border-black bg-gray-100 rounded-full px-1 py-0.5 items-center">{initials(ownerName)}</li>
+                    
                 </ul>
             </div>
         </div>

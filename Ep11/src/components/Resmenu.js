@@ -3,19 +3,24 @@ import { useResMenu } from "./hooks/useResMenu";
 import { RestaurantMenu } from "./RestaurantMenu";
 import { CLOUD_LINK } from "./utils/constants";
 // import  useSwiggyApi from "./hooks/useSwiggApi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import UserContext from "./utils/UserContext";
 
 const Resmenu = (props) => {
     const [showMenu, setShowMenu] = useState(false)
     const resInfo = useResMenu()
+    // const {liveLocation} = useContext(UserContext)    
+    const {currentLocation} = useContext(UserContext)    
     const { resdata } = props;
 
     const handleMenu = () => {
-        showMenu ? setShowMenu(false) : setShowMenu(true)
+        setShowMenu(!showMenu)
     }
 
     useEffect(() => {
         console.log(showMenu)
+        // console.log(liveLocation)
+        console.log(currentLocation)
     },[setShowMenu])
 
     if(!resInfo){
@@ -27,7 +32,12 @@ const Resmenu = (props) => {
         }
         
     const { name, rating, location, menuItems, deliveryTime, imageId, cuisines} = resInfo
-    // const splitter = () => {}
+    const initials = (name = "") => {
+        if (!name || name.length < 0) return "?"   
+        else {return (name[0].toUpperCase())};
+
+        // (!name || name.length < 0) ? " " : return (name[0].toUpperCase())
+    }
     return(
         <div className="flex flex-col items-center w-full">
             <div className="flex flex-col w-[30%]">
@@ -49,22 +59,28 @@ const Resmenu = (props) => {
                     <p className="flex items-center">⏬</p>
                 </div>
 
-                { showMenu ?
+                { showMenu &&
                         menuItems.map((item) =>
-                            (   <ul key={item.id} className="flex flex-row justify-between border rounded-b-2xl border-gray-300 p-1 ">
+                            (   <ul key={item.id} className="flex flex-row justify-between border rounded-b-2xl border-gray-300 bg-gray-50 p-1 my-0.5">
                                     <li className="my-1">{item.name}</li>
                                     <li className="my-1">{item.price}</li>
                                 </ul>
                             )
                         )
-                        :""
                 }
                 
                 {/* <RestaurantMenu></RestaurantMenu> */}
-                <Link to="/" className="my-5"> <h3> ⬅  back to the home page </h3> </Link>    
+                <div className="flex flex-row justify-between my-5">
+                    <Link to="/"> <h3> ⬅  back to the home page </h3> </Link>    
+                    {/* <div className="flex flex-row justify-end"> */}
+                    <div className="flex flex-row">
+                        <p>Current City:- </p>
+                        <span className="mx-2 border border-purple-300 bg-purple-300 rounded-full px-0.5">{initials(currentLocation)}</span>
+                    </div>
+                    {/* </div> */}
+                </div>
             </div>
         </div>
-        
     )
 }
 

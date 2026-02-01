@@ -2,13 +2,13 @@ export const res_menu = {
   "602333": {
     id: "602333",
     name: "Pizza Hut",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/1/fe3a5f94-e46b-401f-bf9d-7e6a9d16d8cb_9869.JPG",
-    location: { locality: "Fort", areaName: "Fort" },
-    costForTwo: "₹300 for two",
+    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/1/e13c8372-f0bb-4220-baf9-061fb8e7d422_602333.JPG",
+    location: { locality: "Girgaon", areaName: "Girgaon" },
+    costForTwo: "₹350 for two",
     cuisines: ["Pizzas"],
-    rating: 4.2,
-    deliveryTime: "30-35 mins",
-    distance: "2.6 km",
+    rating: 4.3,
+    deliveryTime: "20-25 mins",
+    distance: "2.5 km",
     menuItems: [
       { id: "m1", name: "Margherita Pizza", price: "₹249" },
       { id: "m2", name: "Garlic Breadstix", price: "₹129" }
@@ -37,7 +37,7 @@ export const res_menu = {
     costForTwo: "₹350 for two",
     cuisines: ["Burgers", "American"],
     rating: 4.2,
-    deliveryTime: "15-20 mins",
+    deliveryTime: "20-25 mins",
     distance: "2.0 km",
     menuItems: [
       { id: "m5", name: "Crispy Veg Burger", price: "₹79" },
@@ -82,7 +82,7 @@ export const res_menu = {
     costForTwo: "₹400 for two",
     cuisines: ["Burgers", "Fast Food", "Rolls & Wraps"],
     rating: 3.9,
-    deliveryTime: "25-30 mins",
+    deliveryTime: "20-25 mins",
     distance: "2.6 km",
     menuItems: [
       { id: "m11", name: "Zinger Burger", price: "₹189" },
@@ -92,46 +92,91 @@ export const res_menu = {
   "484364": {
     id: "484364",
     name: "La Pino'z Pizza",
-    imageId: "ohgpo6qmmrhyx0r6ffdp",
+    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/8/18/ohgpo6qmmrhyx0r6ffdp",
     location: { locality: "CORNELION BUILDING", areaName: "Mahalaxmi Malabar Hill" },
     costForTwo: "₹400 for two",
     cuisines: ["Pizzas", "Pastas", "Italian"],
     rating: 4.1,
-    deliveryTime: "30-35 mins",
+    deliveryTime: "25-30 mins",
     distance: "2.8 km",
     menuItems: [
       { id: "m13", name: "Cheesy 7 Pizza", price: "₹299" },
       { id: "m14", name: "Paneer Tikka Pizza", price: "₹249" }
     ]
   },
-  "53851": {
-    id: "53851",
-    name: "Maiz Mexican Kitchen",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/15/c63ee96c-3e7a-4b0f-9b1e-ff82bf6bfa63_53851.jpg",
-    location: { locality: "Tardeo", areaName: "Tardeo" },
-    costForTwo: "₹600 for two",
-    cuisines: ["Mexican"],
+  "741472": {
+    id: "741472",
+    name: "Bombay Sweet Shop",
+    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/16/77501b4e-979d-42c7-8909-4a1d697128f3_741472.JPG",
+    location: { locality: "Gamdevi", areaName: "Gamdevi Mandir" },
+    costForTwo: "₹700 for two",
+    cuisines: ["Sweets", "Desserts", "Snacks"],
     rating: 4.7,
-    deliveryTime: "30-35 mins",
-    distance: "2.6 km",
+    deliveryTime: "15-20 mins",
+    distance: "2.5 km",
     menuItems: [
-      { id: "m15", name: "Fajita Burrito", price: "₹349" },
-      { id: "m16", name: "Loaded Nachos", price: "₹289" }
+      { id: "m43", name: "Assorted Mithai Box", price: "₹550" },
+      { id: "m44", name: "Choco Butterscotch Barks", price: "₹350" }
     ]
   },
-  "502478": {
-    id: "502478",
-    name: "Harvest Salad Co",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/8/12/0b188b2c-a2ba-4899-a14f-414357028b8b_502478.JPG",
-    location: { locality: "Mahalaxmi Malabar Hill", areaName: "Mahalaxmi Area" },
-    costForTwo: "₹700 for two",
-    cuisines: ["Salads", "Healthy Food", "Snacks"],
+  "801625": {
+    id: "801625",
+    name: "Blue Tokai Coffee Roasters",
+    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/5/224d8cba-8af6-4e92-9157-ed5ab050d093_801625.JPG",
+    location: { locality: "Ak Nayak Marg", areaName: "Chowpatty" },
+    costForTwo: "₹600 for two",
+    cuisines: ["Cafe", "Coffee", "Beverages"],
     rating: 4.7,
-    deliveryTime: "25-30 mins",
-    distance: "2.6 km",
+    deliveryTime: "20-25 mins",
+    distance: "2.5 km",
     menuItems: [
-      { id: "m17", name: "Greek Salad", price: "₹399" },
-      { id: "m18", name: "Pesto Pasta Salad", price: "₹429" }
+      { id: "m45", name: "Iced Americano", price: "₹210" },
+      { id: "m46", name: "Cappuccino", price: "₹240" }
+    ]
+  },
+  "578216": {
+    id: "578216",
+    name: "Taatsu - Japanese Baked Tarts",
+    imageId: "e69919ae7e41b973006c4e60ea917042",
+    location: { locality: "Gamdevi", areaName: "Gamdevi" },
+    costForTwo: "₹500 for two",
+    cuisines: ["Desserts", "Japanese", "Bakery"],
+    rating: 4.8,
+    deliveryTime: "20-25 mins",
+    distance: "2.5 km",
+    menuItems: [
+      { id: "m47", name: "Cheese Tart", price: "₹150" },
+      { id: "m48", name: "Matcha Tart", price: "₹180" }
+    ]
+  },
+  "605916": {
+    id: "605916",
+    name: "Daniel Patissier",
+    imageId: "20d7d52e0fb7c352df58657023d51fe7",
+    location: { locality: "Marine Lines", areaName: "Chowpatty" },
+    costForTwo: "₹300 for two",
+    cuisines: ["Desserts"],
+    rating: 4.7,
+    deliveryTime: "15-20 mins",
+    distance: "2.4 km",
+    menuItems: [
+      { id: "m49", name: "Macarons Box of 5", price: "₹450" },
+      { id: "m50", name: "Belgian Chocolate Pastry", price: "₹250" }
+    ]
+  },
+  "30183": {
+    id: "30183",
+    name: "Persian Darbar",
+    imageId: "7aeb2bbff29d99d6e986240911ce0e71",
+    location: { locality: "Byculla", areaName: "Byculla" },
+    costForTwo: "₹500 for two",
+    cuisines: ["North Indian", "Biryani", "Mughlai", "Kebabs"],
+    rating: 4.3,
+    deliveryTime: "25-30 mins",
+    distance: "2.0 km",
+    menuItems: [
+      { id: "m29", name: "Chicken Tikka Biryani", price: "₹380" },
+      { id: "m30", name: "Mutton Raan", price: "₹1200" }
     ]
   },
   "569607": {
@@ -142,26 +187,41 @@ export const res_menu = {
     costForTwo: "₹600 for two",
     cuisines: ["Burgers", "American", "Fast Food"],
     rating: 4.5,
-    deliveryTime: "30-35 mins",
+    deliveryTime: "25-30 mins",
     distance: "2.5 km",
     menuItems: [
       { id: "m19", name: "The Standard Burger", price: "₹275" },
       { id: "m20", name: "Cheese Fries", price: "₹185" }
     ]
   },
-  "812555": {
-    id: "812555",
-    name: "Cheesecake & Co.",
-    imageId: "b318c0b4bc2169550145ace1d6e791a2",
-    location: { locality: "N M Joshi Marg", areaName: "Byculla" },
-    costForTwo: "₹300 for two",
-    cuisines: ["Bakery", "Desserts"],
-    rating: 4.6,
-    deliveryTime: "25-30 mins",
-    distance: "2.7 km",
+  "1110546": {
+    id: "1110546",
+    name: "Domino's Pizza",
+    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/11/11/d8387822-ed2f-43ed-9165-2d610e5c3eff_1110546.JPG",
+    location: { locality: "Rehmatullah Road", areaName: "AL SALLAH SHOPPING ARCADE" },
+    costForTwo: "₹400 for two",
+    cuisines: ["Pizzas", "Italian", "Pastas"],
+    rating: 3.7,
+    deliveryTime: "20-25 mins",
+    distance: "0.7 km",
     menuItems: [
-      { id: "m21", name: "New York Cheesecake", price: "₹249" },
-      { id: "m22", name: "Blueberry Cheesecake", price: "₹269" }
+      { id: "m51", name: "Peppy Paneer Pizza", price: "₹359" },
+      { id: "m52", name: "Stuffed Garlic Bread", price: "₹159" }
+    ]
+  },
+  "65676": {
+    id: "65676",
+    name: "La Folie",
+    imageId: "xwax8c4efmu3pfi9zlfi",
+    location: { locality: "Kala Ghoda", areaName: "Fort Area" },
+    costForTwo: "₹900 for two",
+    cuisines: ["Desserts", "Bakery", "Cakes & Pastries"],
+    rating: 4.8,
+    deliveryTime: "25-30 mins",
+    distance: "3.9 km",
+    menuItems: [
+      { id: "m53", name: "Artisanal Chocolate Bar", price: "₹350" },
+      { id: "m54", name: "French Macarons (Box of 6)", price: "₹600" }
     ]
   },
   "403657": {
@@ -172,146 +232,43 @@ export const res_menu = {
     costForTwo: "₹400 for two",
     cuisines: ["Chinese", "Thai", "Burmese"],
     rating: 4.4,
-    deliveryTime: "25-30 mins",
+    deliveryTime: "20-25 mins", // Updated from 25-30
     distance: "2.2 km",
     menuItems: [
       { id: "m23", name: "Khow Suey", price: "₹385" },
       { id: "m24", name: "Thai Green Curry", price: "₹345" }
     ]
   },
-  "7022": {
-    id: "7022",
-    name: "Nothing But Chicken",
-    imageId: "l0gdifmwozvjjihazfpi",
-    location: { locality: "Bandra West", areaName: "Mumbai Central" },
-    costForTwo: "₹400 for two",
-    cuisines: ["Salads", "Biryani", "Kebabs", "Fast Food"],
-    rating: 4.5,
-    deliveryTime: "25-30 mins",
-    distance: "2.2 km",
-    menuItems: [
-      { id: "m25", name: "Chicken Seekh Kebab", price: "₹220" },
-      { id: "m26", name: "Roast Chicken Salad", price: "₹280" }
-    ]
-  },
-  "6116": {
-    id: "6116",
-    name: "Theobroma",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/6/b430fd1a-7f4d-49b1-a430-123b02aae1af_6116.JPG",
-    location: { locality: "Fort", areaName: "Fort" },
-    costForTwo: "₹400 for two",
+  "812555": {
+    id: "812555",
+    name: "Cheesecake & Co.",
+    imageId: "b318c0b4bc2169550145ace1d6e791a2",
+    location: { locality: "N M Joshi Marg", areaName: "Byculla" },
+    costForTwo: "₹300 for two",
     cuisines: ["Bakery", "Desserts"],
     rating: 4.6,
-    deliveryTime: "25-30 mins",
-    distance: "3.8 km",
-    menuItems: [
-      { id: "m27", name: "Overload Brownie", price: "₹110" },
-      { id: "m28", name: "Red Velvet Pastry", price: "₹145" }
-    ]
-  },
-  "30183": {
-    id: "30183",
-    name: "Persian Darbar",
-    imageId: "7aeb2bbff29d99d6e986240911ce0e71",
-    location: { locality: "Byculla", areaName: "Byculla" },
-    costForTwo: "₹500 for two",
-    cuisines: ["North Indian", "Biryani", "Mughlai"],
-    rating: 4.3,
-    deliveryTime: "25-30 mins",
-    distance: "2.0 km",
-    menuItems: [
-      { id: "m29", name: "Chicken Tikka Biryani", price: "₹380" },
-      { id: "m30", name: "Mutton Raan", price: "₹1200" }
-    ]
-  },
-  "636108": {
-    id: "636108",
-    name: "Deliciae by Bunty Mahajan",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/2/f1b875dd-05a7-4517-9f37-639920cc660b_636108.JPG",
-    location: { locality: "Chowpatty", areaName: "Chowpatty" },
-    costForTwo: "₹500 for two",
-    cuisines: ["Bakery", "Desserts", "Rolls & Wraps"],
-    rating: 4.8,
-    deliveryTime: "30-35 mins",
-    distance: "2.6 km",
-    menuItems: [
-      { id: "m31", name: "Biscoff Cheesecake", price: "₹350" },
-      { id: "m32", name: "Chocolate Ganache Cake", price: "₹850" }
-    ]
-  },
-  "373567": {
-    id: "373567",
-    name: "Coco Cafe By CocoCart",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/8/d1d0226a-627b-4822-a200-b10d99f4c204_373567.JPG",
-    location: { locality: "Fort", areaName: "Fort" },
-    costForTwo: "₹1500 for two",
-    cuisines: ["Desserts", "Coffee", "Cafe"],
-    rating: 4.3,
-    deliveryTime: "30-35 mins",
-    distance: "2.5 km",
-    menuItems: [
-      { id: "m33", name: "Hot Chocolate", price: "₹245" },
-      { id: "m34", name: "Avocado Toast", price: "₹450" }
-    ]
-  },
-  "788771": {
-    id: "788771",
-    name: "1441 Pizzeria",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/8/18/6acd3dd5-b5fa-4495-b2b3-6e3dc2a58f90_788771.JPG",
-    location: { locality: "Shivdas Champsi Marg", areaName: "Mazgaon" },
-    costForTwo: "₹600 for two",
-    cuisines: ["Italian"],
-    rating: 4.2,
-    deliveryTime: "25-30 mins",
-    distance: "2.3 km",
-    menuItems: [
-      { id: "m35", name: "Gourmet Garden Pizza", price: "₹545" },
-      { id: "m36", name: "Pesto Paneer Pizza", price: "₹595" }
-    ]
-  },
-  "728722": {
-    id: "728722",
-    name: "Olio - The Wood Fired Pizzeria",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/24/df765529-3c2e-4496-b3db-e06e6b82bc19_728722.JPG",
-    location: { locality: "Phirozshah Mehta", areaName: "Sambava Chamber" },
-    costForTwo: "₹300 for two",
-    cuisines: ["Pizzas", "Pastas", "Italian"],
-    rating: 4.4,
-    deliveryTime: "35-45 mins",
-    distance: "3.0 km",
-    menuItems: [
-      { id: "m37", name: "Classic Margherita", price: "₹349" },
-      { id: "m38", name: "Alfredo Pasta", price: "₹299" }
-    ]
-  },
-  "739734": {
-    id: "739734",
-    name: "Prasuma Momo Kitchen",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/19/23098c60-cc0b-453e-8f2c-635fbfcd4f72_739734.jpg",
-    location: { locality: "Dhobi Talao", areaName: "Gamdevi Mandir" },
-    costForTwo: "₹400 for two",
-    cuisines: ["Momos", "Chinese", "Asian"],
-    rating: 4.6,
-    deliveryTime: "25-30 mins",
+    deliveryTime: "15-20 mins", // Updated from 25-30
     distance: "2.7 km",
     menuItems: [
-      { id: "m39", name: "Pork Momos", price: "₹210" },
-      { id: "m40", name: "Veg Crystal Dimsum", price: "₹180" }
+      { id: "m21", name: "New York Cheesecake", price: "₹249" },
+      { id: "m22", name: "Blueberry Cheesecake", price: "₹269" }
     ]
   },
-  "39998": {
-    id: "39998",
-    name: "Deliure & The Eatrium",
-    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/10/6/66bdb2de-dcf9-44e6-a26e-d6b69d6ada73_39998.jpg",
-    location: { locality: "Byculla", areaName: "Byculla" },
-    costForTwo: "₹450 for two",
-    cuisines: ["Desserts", "Bakery", "Snacks"],
-    rating: 4.6,
-    deliveryTime: "15-20 mins",
-    distance: "1.6 km",
+  "502478": {
+    id: "502478",
+    name: "Harvest Salad Co",
+    imageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/8/12/0b188b2c-a2ba-4899-a14f-414357028b8b_502478.JPG",
+    location: { locality: "Mahalaxmi Malabar Hill", areaName: "Mahalaxmi Area" },
+    costForTwo: "₹700 for two",
+    cuisines: ["Salads", "Healthy Food", "Snacks"],
+    rating: 4.7,
+    deliveryTime: "20-25 mins", // Synced with slaString
+    distance: "2.6 km",
     menuItems: [
-      { id: "m41", name: "Paneer Puffs", price: "₹45" },
-      { id: "m42", name: "Chocolate Truffle Cake", price: "₹650" }
+      { id: "m17", name: "Tandoori Paneer & Avocado Salad", price: "₹329" },
+      { id: "m18", name: "Urban Caesar Salad", price: "₹445" },
+      { id: "m55", name: "Greek Falafel Salad", price: "₹299" },
+      { id: "m56", name: "Mexican California Bowl", price: "₹345" }
     ]
-  }
+  },
 };
