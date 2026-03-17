@@ -10,6 +10,7 @@ const MyCart = () => {
     const handleclear = () => {
         clearcart(clearItems())
     }
+    
     return(
 <div className="flex justify-center w-screen"> 
     <div className="flex flex-col items-center justify-center w-6/12">
