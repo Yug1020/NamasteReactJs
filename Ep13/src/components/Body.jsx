@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import Card from "./Card";
-import ShimmerUI from "./ShimmerUI.js";
+import Card from "./Card.jsx";
+import ShimmerUI from "./ShimmerUI.jsx";
 import { Link } from "react-router-dom";
 import useSwiggyApi from "./hooks/useSwiggyApi.js";
 import useFilter from "./hooks/useFilter.js";
-import {CardWrapped} from "./Card.js"
+import {CardWrapped} from "./Card.jsx"
 import UserContext from "./utils/UserContext.js";
 // import {WithRecommendedLabel} from "./Card.js"
 

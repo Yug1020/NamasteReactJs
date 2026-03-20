@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import User from "./UserClass.js"
+import User from "./UserClass.jsx"
 
 class About extends Component{
     constructor(props){

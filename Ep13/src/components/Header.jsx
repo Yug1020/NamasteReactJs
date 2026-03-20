@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { CND_LOGO } from "./utils/constants";
+import { CND_LOGO } from "./utils/constants.js";
 import { Link } from "react-router-dom";
 import useNetStatus from "./hooks/useNetStatus.js";
 import UserContext from "./utils/UserContext.js";
