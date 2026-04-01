@@ -8,7 +8,7 @@ import Contact from "./src/components/Contact";
 import Resmenu from "./src/components/Resmenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 import ShimmerUI from "./src/components/ShimmerUI";
-import MyCart from "./src/components/Mycart";
+import MyCart from "./src/components/MyCart";
 import UserContext from "./src/components/utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./src/components/Store/appStore";
