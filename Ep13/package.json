@@ -7,8 +7,9 @@
     "@/lib": "./src/lib"
   },
   "scripts": {
-    "start": "parcel index13.html",
-    "test": "jest"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir dist",
+    "test": "test"
   },
   "repository": {
     "type": "git",
