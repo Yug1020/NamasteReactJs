@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { screen, render, act } from "@testing-library/react";
 
 class User extends React.Component{
     constructor(props){
@@ -23,9 +24,9 @@ class User extends React.Component{
         const json = await data.json();
         console.log(json)
         
-        this.setState({
+        act(() => {this.setState({
             userInfo: json
-        })
+        })})
     }
     
     render(){         
