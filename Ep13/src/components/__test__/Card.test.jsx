@@ -14,6 +14,7 @@ const MOCK_DATA = {
 };
 
 describe("Restaurant Card Component Tests", () => {
+    
   it("should render Card component with restaurant name", () => {
     // Passing the mock data as a prop (assuming your component takes 'resData')
     render(<Card resData={MOCK_DATA} />);
@@ -30,7 +31,8 @@ describe("Restaurant Card Component Tests", () => {
 
     // Since cuisines are an array, checking if the string is present
     const cuisines = screen.getByText("Ice Cream, Desserts");
-
+    
     expect(cuisines).toBeInTheDocument();
   });
+
 });
